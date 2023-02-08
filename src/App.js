@@ -65,7 +65,7 @@ const employees = [
 
 function App() {
   const [filteredEmployees, setFilteredEmployees] = useState(employees);
-  const [department, setDepartment] = useState();
+  const [department, setDepartment] = useState("");
   const [experience, setExperience] = useState();
 
   // Using set to filter unique values
@@ -88,14 +88,14 @@ function App() {
   }, [department, experience]);
 
   const clearFilters = () => {
-    setDepartment();
+    setDepartment("");
     setExperience();
   };
 
   return (
     <div className="App">
       <select onChange={(e) => setDepartment(e.target.value)}>
-        <option value="" disabled default selected>
+        <option value="" disabled>
           Select department
         </option>
 
