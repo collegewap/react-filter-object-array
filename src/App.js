@@ -94,7 +94,10 @@ function App() {
 
   return (
     <div className="App">
-      <select onChange={(e) => setDepartment(e.target.value)}>
+      <select
+        onChange={(e) => setDepartment(e.target.value)}
+        value={department}
+      >
         <option value="" disabled>
           Select department
         </option>
